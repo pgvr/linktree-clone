@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buttons",
+  "info": {
+    "name": "Button"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "buttons"
+    }
+  }
+}
