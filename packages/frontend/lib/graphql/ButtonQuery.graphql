@@ -1,0 +1,9 @@
+query Buttons($username: String!) {
+  buttons(where: { user: { username: $username } }) {
+    text
+    url
+    user {
+      username
+    }
+  }
+}
